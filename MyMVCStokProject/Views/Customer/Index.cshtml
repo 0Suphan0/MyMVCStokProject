@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@model List<MyMVCStokProject.Models.Entitiy.TBL_MUSTERILER>
+    
+
+<table class="table table-bordered">
+    <tr>
+        <th>Musteri ID</th>
+        <th>Musteri Ad</th>
+        <th>Musteri Soyad</th>
+    </tr>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.MUSTERIID</th>
+                <td>@item.MUSTERIAD</td>
+                <td>@item.MUSTERISOYAD</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

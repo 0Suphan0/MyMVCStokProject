@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@model List<MyMVCStokProject.Models.Entitiy.TBL_URUNLER>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Urun ID</th>
+        <th>Urun Ad</th>
+        <th>Urun Kategori</th>
+        <th>Fiyatı</th>
+        <th>Marka</th>
+        <th>Stok</th>
+    </tr>
+    
+    <tbody>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.URUNID</th>
+            <th>@item.URUNKATEGORI</th>
+            <td>@item.URUNAD</td>
+            <td>@item.FIYAT</td>
+            <td>@item.MARKA</td>
+            <td>@item.STOK</td>
+        </tr>
+    }
+
+    </tbody>
+</table>

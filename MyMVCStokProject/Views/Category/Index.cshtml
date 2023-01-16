@@ -4,5 +4,26 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+@model List<MyMVCStokProject.Models.Entitiy.TBL_KATEGORILER>
+
 <h2>Burası Kategorilerin Listeneceği Sayfadır.</h2>
 
+<table class="table table-bordered ">
+    <tr>
+        <td>Kategori ID</td>
+        <td>Kategori Adı</td>
+    </tr>
+    
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.KATEGORIID</th>
+            <td>@item.KATEGORIAD</td>
+        </tr>
+    }
+   
+
+
+    </tbody>
+</table>
