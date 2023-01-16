@@ -15,6 +15,8 @@
         <th>Fiyatı</th>
         <th>Marka</th>
         <th>Stok</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
     
     <tbody>
@@ -28,8 +30,12 @@
             <td>@item.FIYAT</td>
             <td>@item.MARKA</td>
             <td>@item.STOK</td>
+            <th><a href="/Product/Delete/@item.URUNID" class="btn btn-danger">SİL</a></th>
+            <th><a href="/Product/Update/@item.URUNID" class="btn btn-success">GÜNCELLE</a></th>
         </tr>
     }
 
     </tbody>
 </table>
+
+<a href="/Product/NewProduct" class="btn btn-primary">Yeni Ürün</a>

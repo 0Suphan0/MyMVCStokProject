@@ -12,6 +12,8 @@
     <tr>
         <td>Kategori ID</td>
         <td>Kategori Adı</td>
+        <td> Sil </td>
+        <td> Güncelle </td>
     </tr>
     
     <tbody>
@@ -20,10 +22,13 @@
         <tr>
             <th>@item.KATEGORIID</th>
             <td>@item.KATEGORIAD</td>
+            <th><a href="/Category/Delete/@item.KATEGORIID" class="btn btn-danger">SİL</a></th>
+            <th><a href="/Category/Update/@item.KATEGORIID" class="btn btn-success">GÜNCELLE</a></th>
         </tr>
     }
-   
 
 
     </tbody>
 </table>
+
+<a href="/Category/NewCategory" class="btn btn-primary">Yeni Kategori</a>

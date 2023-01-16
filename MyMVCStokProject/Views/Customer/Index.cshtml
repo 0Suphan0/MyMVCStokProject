@@ -16,14 +16,16 @@
 
     <tbody>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <th>@item.MUSTERIID</th>
-                <td>@item.MUSTERIAD</td>
-                <td>@item.MUSTERISOYAD</td>
-            </tr>
-        }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.MUSTERIID</th>
+            <td>@item.MUSTERIAD</td>
+            <td>@item.MUSTERISOYAD</td>
+        </tr>
+    }
 
     </tbody>
 </table>
+
+<a href="/Customer/NewCustomer" class="btn btn-primary">Yeni Müşteri</a>

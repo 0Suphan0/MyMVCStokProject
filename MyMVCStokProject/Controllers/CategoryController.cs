@@ -18,5 +18,20 @@ namespace MyMVCStokProject.Controllers
 
             return View(allCategories);
         }
+
+        [HttpGet]
+        public ActionResult NewCategory()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NewCategory(TBL_KATEGORILER p1)
+        {
+            _mvcDbStokEntities1.TBL_KATEGORILER.Add(p1);
+            _mvcDbStokEntities1.SaveChanges();
+            return View();
+        }
     }
 }

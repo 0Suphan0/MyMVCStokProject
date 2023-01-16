@@ -17,5 +17,20 @@ namespace MyMVCStokProject.Controllers
             var myAllCustomers = mvcDbStokEntities1.TBL_MUSTERILER.ToList();
             return View(myAllCustomers);
         }
+
+        [HttpGet]
+        public ActionResult NewCustomer()
+        {
+            
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NewCustomer(TBL_MUSTERILER p1)
+        {
+            mvcDbStokEntities1.TBL_MUSTERILER.Add(p1);
+            mvcDbStokEntities1.SaveChanges();
+            return View();
+        }
     }
 }
