@@ -12,6 +12,8 @@
         <th>Musteri ID</th>
         <th>Musteri Ad</th>
         <th>Musteri Soyad</th>
+        <th> </th>
+        <th> </th>
     </tr>
 
     <tbody>
@@ -22,6 +24,8 @@
             <th>@item.MUSTERIID</th>
             <td>@item.MUSTERIAD</td>
             <td>@item.MUSTERISOYAD</td>
+            <td><a class="btn btn-danger" href="/Customer/DeleteCustomer/@item.MUSTERIID">SİL</a></td>
+            <td><a class="btn btn-success" href="/Customer/DeleteCustomer/@item.MUSTERIID">GÜNCELLE</a></td>
         </tr>
     }
 

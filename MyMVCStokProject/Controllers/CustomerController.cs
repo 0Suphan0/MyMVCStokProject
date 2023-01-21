@@ -32,5 +32,18 @@ namespace MyMVCStokProject.Controllers
             mvcDbStokEntities1.SaveChanges();
             return View();
         }
+
+
+        public ActionResult DeleteCustomer(int id)
+        {
+           var customer= mvcDbStokEntities1.TBL_MUSTERILER.Find(id);
+           mvcDbStokEntities1.TBL_MUSTERILER.Remove(customer);
+           mvcDbStokEntities1.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        
+
+
     }
 }

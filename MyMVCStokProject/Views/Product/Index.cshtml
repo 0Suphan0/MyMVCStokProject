@@ -10,8 +10,8 @@
 <table class="table table-bordered">
     <tr>
         <th>Urun ID</th>
-        <th>Urun Ad</th>
         <th>Urun Kategori</th>
+        <th>Urun Ad</th>
         <th>Fiyatı</th>
         <th>Marka</th>
         <th>Stok</th>
@@ -25,12 +25,12 @@
     {
         <tr>
             <th>@item.URUNID</th>
-            <th>@item.URUNKATEGORI</th>
+            <th>@item.TBL_KATEGORILER.KATEGORIAD</th>
             <td>@item.URUNAD</td>
             <td>@item.FIYAT</td>
             <td>@item.MARKA</td>
             <td>@item.STOK</td>
-            <th><a href="/Product/Delete/@item.URUNID" class="btn btn-danger">SİL</a></th>
+            <th><a href="/Product/DeleteProduct/@item.URUNID" class="btn btn-danger">SİL</a></th>
             <th><a href="/Product/Update/@item.URUNID" class="btn btn-success">GÜNCELLE</a></th>
         </tr>
     }

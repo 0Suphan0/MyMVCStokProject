@@ -36,9 +36,20 @@ namespace MyMVCStokProject.Controllers
         [HttpPost]
         public ActionResult NewProduct(TBL_URUNLER p1)
         {
+            var category = myDbStokEntities1.TBL_KATEGORILER.Where(m => m.KATEGORIID == p1.TBL_KATEGORILER.KATEGORIID)
+                .FirstOrDefault();
+            p1.TBL_KATEGORILER = category;
             myDbStokEntities1.TBL_URUNLER.Add(p1);
             myDbStokEntities1.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteProduct(int id)
+        {
+            var product = myDbStokEntities1.TBL_URUNLER.Find(id);
+            myDbStokEntities1.TBL_URUNLER.Remove(product);
+            myDbStokEntities1.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

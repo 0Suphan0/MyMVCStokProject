@@ -1,5 +1,5 @@
 ﻿
-@model MyMVCStokProject.Models.Entitiy.TBL_KATEGORILER
+@model MyMVCStokProject.Models.Entitiy.TBL_URUNLER
 @{
     
     ViewBag.Title = "NewProduct";
@@ -17,7 +17,7 @@
 
     <div>
         <label style="text-align: center" class="form-control">Ürün Kategorisini Seçiniz </label>
-        @Html.DropDownListFor(m=>m.KATEGORIAD,(List<SelectListItem>)ViewBag.Values, new { @class="form-control"});
+        @Html.DropDownListFor(m=>m.TBL_KATEGORILER.KATEGORIID,(List<SelectListItem>)ViewBag.Values, new { @class="form-control"});
     </div>
 
     <div>

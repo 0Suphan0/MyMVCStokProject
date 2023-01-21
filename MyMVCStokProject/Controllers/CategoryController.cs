@@ -33,5 +33,23 @@ namespace MyMVCStokProject.Controllers
             _mvcDbStokEntities1.SaveChanges();
             return View();
         }
+
+
+        public ActionResult DeleteCategory(int id)
+        {
+            var category = _mvcDbStokEntities1.TBL_KATEGORILER.Find(id);
+            _mvcDbStokEntities1.TBL_KATEGORILER.Remove(category);
+            _mvcDbStokEntities1.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        public ActionResult GetCategory(int id)
+        {
+            var category = _mvcDbStokEntities1.TBL_KATEGORILER.Find(id);
+
+            return View("GetCategory", category);
+
+        }
     }
 }
